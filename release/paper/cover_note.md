@@ -1,0 +1,13 @@
+# Cover note: Enclosure and the Swing Riots
+
+## Suggested journals
+
+All three are subscription journals that publish accepted articles without an author charge (open access is optional and paid). Word limits from the journals' own author guidelines, checked in 2026.
+
+1. **Economic History Review** (Economic History Society, Wiley). Articles should normally not exceed 10,000 words including footnotes but excluding tables, figures, bibliography and appendices; abstract up to 200 words, plus a two-sentence summary and a 280-character social media statement. The main text fits and the abstract is under 200 words. Submissions must be anonymised: the two self-citations (the enclosure and Captain Swing data studies) and the map and repository links must be made anonymous in the submitted text. The best fit: it publishes quantitative tests of classic debates in British economic and social history, including enclosure and the Swing riots.
+2. **Social Science History** (Social Science History Association, Cambridge University Press). Main text including notes and references up to 12,000 words; abstract up to 250 words. Fits as it stands, with the appendix as online supplementary material. Suits the pre-registered design and the methodological point about unit size in event data.
+3. **Agricultural History Review** (British Agricultural History Society). Usual maximum about 9,000 to 11,000 words including footnotes, with tables and figures counted (a full-page figure counts as 720 words); articles up to 15,000 words are considered. The paper would need shortening (move the appendix tables and two figures to supplementary material). Suits the rural-history readership most directly.
+
+## Summary for a cover letter (about 150 words)
+
+Hobsbawm and Rudé's claim that parliamentary enclosure helped to cause the Swing riots of 1830 has never been tested parish by parish. This paper links the 5,375 places named in every enclosure Act to the parishes of Caprettini and Voth's Swing data, publishes and audits the linkage, and estimates a model specified in advance on 9,674 parishes. The planned model finds that recently enclosed parishes were 2.7 percentage points more likely to riot, but parishes enclosed before 1790 show the same gap, stricter linking weakens it, and, in exploratory models, it disappears once parish area is held constant (-0.8 points, 95% CI -3.2 to 1.5). The paper therefore offers a careful, transparent null result on a central claim of the history of rural protest, and a general warning that parish size confounds studies of whether any event occurred in a unit.
