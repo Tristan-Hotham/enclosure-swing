@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Enclosure and the Swing riots | 9,674 parishes tested</title>
+<meta name="description" content="Did English parishes enclosed by Act of Parliament in 1790 to 1830 riot more in the Swing rising of 1830? A pre-planned test on 9,674 parishes.">
+<meta property="og:title" content="Enclosure and the Swing riots">
+<meta property="og:description" content="Enclosed parishes rioted a little more in 1830, but no more than parishes enclosed decades earlier, and the gap vanishes once parish size is held constant.">
+<meta property="og:image" content="https://maps.tristanhotham.com/enclosure-swing/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/enclosure-swing/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+:root{--bg:#FBF6E9;--fg:#2B2119;--muted:#6E604E;--rule:#E6DCC4;--card:#FFFBF1;--border:#D3C29A;--hot:#A3261B;--gold:#C8922E;--blue:#2F6DB0;
+  --display:"Fraunces",Georgia,serif;--body:"Source Serif 4",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A1612;--fg:#EFE6D4;--muted:#ADA08B;--rule:#3A3128;--card:#211B15;--border:#4D4234;--hot:#E07A6C;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1A1612;--fg:#EFE6D4;--muted:#ADA08B;--rule:#3A3128;--card:#211B15;--border:#4D4234;--hot:#E07A6C;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:740px;margin:0 auto;padding-block:28px 64px}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+h2{font:800 32px/1.06 var(--display);margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+p{margin:0 0 16px}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:10px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:24px 0}
+.stat b{display:block;font:900 38px/1 var(--display);color:var(--hot)}
+.stat span{font:400 13px/1.35 var(--mono);color:var(--muted)}
+.figure{margin:22px 0}.figure img{width:100%;display:block;border:1px solid var(--border)}
+.figure figcaption{font:400 13px/1.45 var(--mono);color:var(--muted);margin-top:6px}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.4 var(--mono);margin:12px 0 4px}
+table.t th{text-align:left;font-weight:500;border-bottom:2px solid var(--fg);padding:5px 6px 5px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:5px 6px 5px 0;vertical-align:top}
+table.t .r{text-align:right;white-space:nowrap}
+.tscroll{overflow-x:auto}
+details{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin:18px 0;font-size:16px}
+summary{font:500 13px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:4px 8px;cursor:pointer;min-height:28px}
+/* map */
+.topbar{height:42px;display:flex;align-items:center;gap:14px;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 14px;border-bottom:3px double var(--fg);background:var(--bg);white-space:nowrap;overflow:hidden}
+.tb-name{font:800 18px/1 var(--display);color:var(--hot);text-decoration:none}
+.tb-k{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tb-links{margin-left:auto;display:flex;gap:16px;font:500 12px/1 var(--mono)}.tb-links a{text-decoration:none}
+.mapband{width:100vw;margin-left:calc(50% - 50vw)}
+.pane{position:relative;height:calc(100svh - 45px);min-height:500px;background:#F3EEE2;overflow:hidden;border-bottom:1px solid #BCA676}
+#map{position:absolute;inset:0}
+.cart{position:absolute;left:12px;top:12px;z-index:5;max-width:min(340px,calc(100% - 24px));background:rgba(255,251,241,.96);color:#2B2119;border:2px solid #2B2119;padding:10px 14px;box-shadow:0 3px 14px rgba(60,40,10,.2)}
+.cart h1{font:900 27px/1.02 var(--display);margin:4px 0 0}.cart h1 em{color:#A3261B;font-style:normal}
+.cart .dek{font-size:13.5px;line-height:1.38;margin:6px 0 0}
+.cart .byline{font-size:11px;color:#6E604E;margin-top:6px}
+.cart .fold{position:absolute;right:6px;top:4px;border:0;background:none;font:500 16px/1 var(--mono);color:#A3261B;cursor:pointer;min-width:28px;min-height:28px}
+.cart.folded .body{display:none}.cart.folded{padding:6px 40px 6px 12px}.cart .min{display:none;font:800 15px/1.2 var(--display);color:#A3261B}.cart.folded .min{display:block}
+.ctl{position:absolute;right:54px;top:10px;z-index:6;display:flex;flex-direction:column;gap:6px;align-items:flex-end;width:min(340px,calc(100% - 420px))}
+.srch{position:relative;width:100%}
+.srch input{width:100%;font:400 15px/1 var(--mono);background:rgba(255,251,241,.97);color:#2B2119;border:1px solid #9C8656;border-radius:3px;padding:9px 10px;min-height:40px}
+.sug{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:#FFFBF1;border:1px solid #9C8656;max-height:280px;overflow:auto;display:none;z-index:12;color:#2B2119}
+.sug li{padding:8px 10px;cursor:pointer;border-bottom:1px solid #EFE4C9;font:400 14px/1.3 var(--mono)}.sug li span{color:#7A6A52;font-size:12px}
+.sug li:hover,.sug li[aria-selected="true"]{background:#F3E7C8}
+.chip{font:500 12px/1 var(--mono);background:rgba(255,251,241,.97);color:#2B2119;border:1px solid #9C8656;border-radius:999px;padding:9px 12px;cursor:pointer;min-height:34px}
+.chip[aria-expanded="true"]{background:#2B2119;color:#FBF6E9}
+.lp{position:absolute;right:54px;top:100px;z-index:9;background:rgba(255,251,241,.98);border:1px solid #9C8656;border-radius:4px;padding:10px 12px;font:400 13px/1.3 var(--mono);color:#2B2119;box-shadow:0 3px 12px rgba(60,40,10,.25);display:none;min-width:250px;max-height:calc(100% - 200px);overflow:auto}
+.lp.open{display:block}
+.lp h4{margin:8px 0 4px;font:600 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#A3261B}
+.lp label{display:flex;gap:8px;align-items:center;padding:4px 0;cursor:pointer;min-height:30px}
+.lp input{accent-color:#A3261B;width:16px;height:16px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.25)}
+.slider{position:absolute;left:12px;bottom:12px;z-index:6;background:rgba(255,251,241,.97);border:1px solid #9C8656;border-radius:4px;padding:8px 12px;font:400 12.5px/1.3 var(--mono);color:#2B2119;width:min(420px,calc(100% - 24px));box-shadow:0 2px 8px rgba(60,40,10,.18)}
+.slider .row{display:flex;gap:10px;align-items:center}
+.slider input[type=range]{flex:1;accent-color:#A3261B;min-height:30px}
+.slider button{font:500 12px/1 var(--mono);border:1px solid #9C8656;background:#FFFBF1;color:#2B2119;border-radius:3px;padding:6px 9px;cursor:pointer;min-height:30px}
+.slider b{font:800 22px/1 var(--display);color:#A3261B;min-width:52px}
+.key{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:5px;color:#4E4232}
+.key span{display:flex;gap:5px;align-items:center}
+.ring{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid #2B2119}
+.maplibregl-popup-content{background:#FFFBF1;color:#2B2119;font:400 13px/1.45 var(--mono);border:1px solid #9C8656;border-radius:4px;padding:10px 12px;max-width:320px;max-height:55vh;overflow:auto}
+.maplibregl-popup-content b.t{display:block;font:800 18px/1.15 var(--display);color:#A3261B;padding-right:14px}
+.maplibregl-popup-content td{padding:1px 8px 1px 0;vertical-align:top}.maplibregl-popup-content td:first-child{color:#7A6A52}
+.maplibregl-popup-content ul{margin:4px 0;padding-left:16px}.maplibregl-popup-content li{margin:3px 0}
+.maplibregl-popup-content .nt{color:#7A6A52;font-size:11.5px;margin:6px 0 0}
+.maplibregl-ctrl-attrib{font:400 11px/1.3 var(--mono)!important}
+@media (max-width:900px){.ctl{left:12px;right:54px;width:auto;top:10px;align-items:flex-start}.cart{top:100px}.lp{left:10px;right:auto}}
+@media (max-width:600px){.tb-k,.tb-links .x{display:none}.cart{max-width:calc(100% - 24px)}.cart h1{font-size:22px}.lp{left:8px;right:8px;min-width:0}.slider{bottom:28px;padding:6px 10px}.slider .key{display:none}.maplibregl-popup-content{max-height:42vh}.maplibregl-ctrl-bottom-right{bottom:110px}}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="tb-name" href="#top">Enclosure &amp; Swing</a><span class="tb-k">A data study</span>
+<span class="tb-links"><a href="#story">Findings</a><a class="x" href="https://doi.org/10.5281/zenodo.24091976">Paper</a><a class="x" href="https://blog.tristanhotham.com/2026/10/31/enclosure-swing/">Blog</a><button class="theme" id="theme" type="button">Theme</button></span></div>
+<div class="mapband" id="top"><div class="pane" data-fullscreen-map>
+<div id="map" role="region" aria-label="Map of parishes, enclosure Acts and Swing unrest"></div>
+<div class="cart" id="cart"><button class="fold" id="fold" type="button" aria-label="Fold the title">&#8722;</button>
+<div class="min">Enclosure and the Swing riots</div>
+<div class="body"><div class="kicker">England and Wales, 1750 to 1831</div>
+<h1>Enclosure and <em>the Swing riots</em></h1>
+<p class="dek">Every parish of 1851 England and Wales (10,699), coloured by when an Act of Parliament enclosed it, ringed where the Swing rising of 1830 reached it. Tap any parish for its Acts and incidents.</p>
+<div class="byline">Dr Tristan Hotham · Independent researcher · 2026</div></div></div>
+<div class="ctl"><div class="srch"><input id="q" type="search" placeholder="Find a parish or county" autocomplete="off" aria-label="Find a parish"><ul class="sug" id="sug" role="listbox"></ul></div>
+<button class="chip" id="lyrBtn" type="button" aria-expanded="false" aria-controls="lp">Layers</button></div>
+<div class="lp" id="lp"><h4>This study</h4>
+<label><input type="checkbox" data-l="recent" checked><span class="sw" style="background:#A3261B"></span>Act 1790 to 1830</label>
+<label><input type="checkbox" data-l="old" checked><span class="sw" style="background:#C8922E"></span>Acts before 1790 only</label>
+<label><input type="checkbox" data-l="future" checked><span class="sw" style="background:#2F6DB0"></span>First Act 1831 or later</label>
+<label><input type="checkbox" data-l="never" checked><span class="sw" style="background:#CDBF9F"></span>No Act</label>
+<label><input type="checkbox" data-l="swing" checked><span class="ring"></span>Swing unrest (ring sized by incidents)</label>
+<label><input type="checkbox" data-l="outside"><span class="sw" style="background:#fff"></span>Parishes outside the main sample</label>
+<h4>Base map</h4>
+<label><input type="checkbox" data-b="labels" checked>Place names</label>
+<label><input type="checkbox" data-b="roads">Roads</label>
+<label><input type="checkbox" data-b="outline" checked>England and Wales outline (area of the data)</label></div>
+<div class="slider"><div class="row"><b id="yr">1830</b><input id="rng" type="range" min="1750" max="1870" step="1" value="1830" aria-label="Show enclosure Acts up to this year"><button id="play" type="button">Play</button></div>
+<div class="key"><span>A parish takes its colour (its status in 1830) once it is named in an Act up to the year chosen.</span></div></div>
+</div></div>
+
+<div class="wrap" id="story">
+<p class="kicker">The question</p>
+<p class="lede">In the autumn of 1830 farm labourers across southern and eastern England broke threshing machines, burned ricks and sent threatening letters signed "Captain Swing". Historians have long argued that parliamentary enclosure, which fenced the open fields and commons of thousands of parishes in the decades before, fed the anger. I test that claim parish by parish.</p>
+<div class="stats">
+<div class="stat"><b>9,674</b><span>parishes in the test</span></div>
+<div class="stat"><b>2,184</b><span>named in an enclosure Act of 1790 to 1830</span></div>
+<div class="stat"><b>-0.8</b><span>percentage points: the gap once parish size is held constant</span></div>
+</div>
+
+<h2><span class="n">01</span>A small gap, as planned</h2>
+<p>I wrote the analysis plan before running any model. Among the parishes of Caprettini and Voth's study of the rising, 18.4% of those enclosed by Act in 1790 to 1830 saw at least one Swing incident, against 13.0% of those with no Act before 1831. In the planned model, which compares parishes within the same county and holds constant threshing machines, population density, farm employment, soils and distances, the gap is 2.7 percentage points (95% confidence interval 0.2 to 5.3), about a fifth of the average chance of unrest.</p>
+<figure class="figure"><img src="img/map.jpg" alt="Two maps of England and Wales: parishes named in enclosure Acts, concentrated in the Midlands and Norfolk, and parishes with Swing unrest, concentrated in the south and east." loading="lazy"><figcaption>Where the Acts fell, and where Swing struck.</figcaption></figure>
+
+<h2><span class="n">02</span>But old enclosure looks just the same</h2>
+<p>If fresh grievance drove the riots, recent enclosure should matter more than enclosure two generations earlier. It does not: parishes whose only Acts came before 1790 have a gap of 3.1 points, and the difference between the two is -0.4 points (p = 0.82). Parishes enclosed in the 1820s do riot most often in the raw figures, but that lead is imprecise and shrinks once size is taken into account.</p>
+<figure class="figure"><img src="img/timing.jpg" alt="Bar chart of the share of parishes with Swing unrest by decade of their last enclosure Act, from 14% in the 1750s to 25% in the 1820s, against 13% for parishes with no Act." loading="lazy"><figcaption>Raw shares: no controls.</figcaption></figure>
+
+<h2><span class="n">03</span>The gap is parish size</h2>
+<p>Large parishes were more likely to be named in an enclosure Act, and more likely to record at least one incident of any kind. In the biggest fifth of parishes 22% saw unrest, in the smallest fifth 8%. Adding parish area to the model, a check I added after seeing the planned results, turns the gap to -0.8 points (95% CI -3.2 to 1.5).</p>
+<figure class="figure"><img src="img/size.jpg" alt="Two bar charts by parish area: the share with Swing unrest rises from 8% to 22%, and the share named in an enclosure Act rises from 21% to 40%." loading="lazy"><figcaption>Bigger parishes: more Acts and more unrest.</figcaption></figure>
+<figure class="figure"><img src="img/coef.jpg" alt="Coefficient plot: planned specifications mostly between 2 and 5 points, stricter linking between 0.7 and 1.7 points, and models with parish area near zero." loading="lazy"><figcaption>Every specification, with 95% confidence intervals.</figcaption></figure>
+
+<h2><span class="n">04</span>What it means</h2>
+<p>The data do not support the idea that recent parliamentary enclosure, parish by parish, predicted where Swing broke out once threshing machines and the size of the parish are taken into account. That is not the same as saying enclosure did not matter: its effects on wages, poor relief and common rights may have spread across whole districts, many southern parishes were enclosed long before by agreement, and the Act data reach only 79% of the places named in Acts of 1790 to 1830.</p>
+<div class="tscroll"><table class="t"><thead><tr><th>Check</th><th class="r">Points</th><th class="r">95% CI</th><th class="r">N</th></tr></thead><tbody>
+<tr><td>Main: LPM, county FE, controls</td><td class="r">+2.7</td><td class="r">0.2 to 5.3</td><td class="r">9,674</td></tr>
+<tr><td>No controls, no fixed effects</td><td class="r">+5.3</td><td class="r">1.7 to 8.9</td><td class="r">9,674</td></tr>
+<tr><td>Controls, no fixed effects</td><td class="r">+5.5</td><td class="r">3.0 to 8.0</td><td class="r">9,674</td></tr>
+<tr><td>County FE, no controls</td><td class="r">+3.7</td><td class="r">1.3 to 6.2</td><td class="r">9,674</td></tr>
+<tr><td>Region FE instead of county FE</td><td class="r">+4.2</td><td class="r">1.6 to 6.7</td><td class="r">9,674</td></tr>
+<tr><td>Market-town FE instead of county FE</td><td class="r">+2.6</td><td class="r">0.4 to 4.8</td><td class="r">9,674</td></tr>
+<tr><td>Standard errors clustered on 50 km cells</td><td class="r">+2.7</td><td class="r">0.3 to 5.1</td><td class="r">9,674</td></tr>
+<tr><td>Logit (average marginal effect)</td><td class="r">+2.6</td><td class="r">0.3 to 5.0</td><td class="r">9,674</td></tr>
+<tr><td>With neighbouring enclosure (5 and 10 km)</td><td class="r">+3.1</td><td class="r">0.6 to 5.6</td><td class="r">9,674</td></tr>
+<tr><td>With pre-1830 unrest</td><td class="r">+2.8</td><td class="r">0.2 to 5.3</td><td class="r">9,674</td></tr>
+<tr><td>Subsample with Gonner district data</td><td class="r">+1.8</td><td class="r">-0.7 to 4.2</td><td class="r">6,715</td></tr>
+<tr><td>Same, adding Gonner district enclosure</td><td class="r">+1.6</td><td class="r">-0.8 to 4.0</td><td class="r">6,715</td></tr>
+<tr><td>Subsample with 1803 poor relief</td><td class="r">-0.6</td><td class="r">-6.9 to 5.6</td><td class="r">1,251</td></tr>
+<tr><td>Same, adding poor relief per head</td><td class="r">-0.6</td><td class="r">-6.9 to 5.6</td><td class="r">1,251</td></tr>
+<tr><td>Linking: name matches only</td><td class="r">+1.7</td><td class="r">-0.9 to 4.3</td><td class="r">9,674</td></tr>
+<tr><td>Linking: gazetteer point only</td><td class="r">+1.6</td><td class="r">-0.7 to 3.9</td><td class="r">9,674</td></tr>
+<tr><td>Linking: name and point agree</td><td class="r">+0.7</td><td class="r">-1.6 to 3.0</td><td class="r">9,674</td></tr>
+<tr><td>Linking: extended (close spellings)</td><td class="r">+2.8</td><td class="r">0.2 to 5.3</td><td class="r">9,674</td></tr>
+<tr><td>Counties with at least 80% of places linked</td><td class="r">+1.2</td><td class="r">-2.3 to 4.8</td><td class="r">5,614</td></tr>
+<tr><td>Parishes whose exposure all rules agree on</td><td class="r">+1.5</td><td class="r">-1.0 to 4.0</td><td class="r">8,692</td></tr>
+<tr><td>Adding log parish area</td><td class="r">-0.8</td><td class="r">-3.2 to 1.5</td><td class="r">9,674</td></tr>
+<tr><td>Adding parish area deciles</td><td class="r">-0.3</td><td class="r">-2.8 to 2.2</td><td class="r">9,674</td></tr>
+<tr><td>Logit adding log parish area (AME)</td><td class="r">-0.4</td><td class="r">-2.5 to 1.6</td><td class="r">9,674</td></tr>
+<tr><td>Placebo: first Act 1831 to 1870 (parishes with no earlier Act)</td><td class="r">-4.5</td><td class="r">-9.9 to 0.8</td><td class="r">6,494</td></tr>
+
+</tbody></table></div>
+<details><summary>How I did this</summary>
+<p>Parishes and riots: the open data of Caprettini and Voth (2020), 10,699 parishes of 1851 with Swing incidents from Holland's <i>Swing Unmasked</i>, threshing-machine records and 1801 census covariates; main sample 9,674. Acts: 4,104 enclosure Acts from the Chronological Tables of Private and Local Acts, from my earlier enclosure study. I linked each place named in an Act to a parish by name within the county named in the title, or else by the point the gazetteer gives it: 79.0% of the 3,322 places named in Acts of 1790 to 1830 were linked, and where both a name and a point exist they agree 90% of the time. A hand check of 100 random links found 97 right.</p>
+<p>Models: linear probability models of any Swing incident with county fixed effects and standard errors clustered by county (54 counties), as planned in advance; logit, Poisson, region and market-town effects, placebo Acts of 1831 to 1870 (-4.5 points), a permutation test, leaving out each county in turn (range 2.1 to 3.2), and four alternative linking rules. All of this is correlation, not proof of cause.</p></details>
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.24091976">Read the paper</a><a href="https://blog.tristanhotham.com/2026/10/31/enclosure-swing/">Read the blog post</a><a href="https://github.com/Tristan-Hotham/enclosure-swing">Data and code</a></div>
+<footer>
+<p>Dr Tristan Hotham · Independent researcher · 2026</p>
+<p>Sources: Caprettini, B. and Voth, H.-J. (2020) Rage against the machines, <i>American Economic Review: Insights</i> 2(3), 305 to 320, and their replication data (openICPSR 117044, CC BY 4.0); Chronological Tables of Private and Local Acts, legislation.gov.uk (Open Government Licence v3.0); Wikidata (CC0). Base map © OpenFreeMap, © OpenMapTiles, © OpenStreetMap contributors.</p>
+<p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+<p>Text and data CC BY 4.0; code MIT.</p>
+</footer>
+</div>
+<!-- map-fullscreen v1 -->
+<style id="mfs-style">
+.mfs-btn{position:absolute;top:10px;right:10px;z-index:1001;width:34px;height:34px;border:2px solid rgba(0,0,0,.25);border-radius:4px;background:#fff;color:#222;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.mfs-btn:hover{background:#f2f2f2}
+.mfs-btn svg{width:18px;height:18px}
+.mfs-host.mfs-btn-left .mfs-btn{right:auto;left:54px}
+.mfs-fake{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;max-width:none!important;max-height:none!important;margin:0!important;z-index:100000!important;border-radius:0!important}
+html.mfs-lock,html.mfs-lock body{overflow:hidden!important}
+:fullscreen.mfs-host{width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;margin:0!important;border-radius:0!important}
+</style>
+<script id="mfs-script">
+(function(){
+  var ICON_OPEN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  var ICON_CLOSE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>';
+  function poke(){setTimeout(function(){window.dispatchEvent(new Event('resize'));},60);setTimeout(function(){window.dispatchEvent(new Event('resize'));},400);}
+  function realFS(){return document.fullscreenElement||document.webkitFullscreenElement;}
+  function add(el){
+    if(el.__mfs)return; el.__mfs=1;
+    var cs=getComputedStyle(el); if(cs.position==='static')el.style.position='relative';
+    el.classList.add('mfs-host');
+    // avoid clashing with a top-right Leaflet control (e.g. "Map layers")
+    var tr=el.querySelector('.leaflet-top.leaflet-right');
+    if(tr&&tr.children.length){ el.classList.add('mfs-btn-left'); }
+    var b=document.createElement('button'); b.type='button'; b.className='mfs-btn';
+    b.title='Full screen map'; b.setAttribute('aria-label','Full screen map'); b.innerHTML=ICON_OPEN;
+    ['click','dblclick','mousedown','touchstart','wheel'].forEach(function(t){b.addEventListener(t,function(e){e.stopPropagation();},{passive:t!=='click'});});
+    function setIcon(on){b.innerHTML=on?ICON_CLOSE:ICON_OPEN;b.title=on?'Exit full screen':'Full screen map';b.setAttribute('aria-label',b.title);}
+    function exitFake(){el.classList.remove('mfs-fake');document.documentElement.classList.remove('mfs-lock');setIcon(false);poke();}
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      if(el.classList.contains('mfs-fake')){exitFake();return;}
+      if(realFS()){(document.exitFullscreen||document.webkitExitFullscreen).call(document);return;}
+      var req=el.requestFullscreen||el.webkitRequestFullscreen;
+      if(req){ try{ var p=req.call(el); if(p&&p.catch)p.catch(function(){el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke();}); }catch(err){el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke();} }
+      else { el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke(); }
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&el.classList.contains('mfs-fake'))exitFake();});
+    ['fullscreenchange','webkitfullscreenchange'].forEach(function(t){document.addEventListener(t,function(){setIcon(realFS()===el);poke();});});
+    el.appendChild(b);
+  }
+  function scan(){
+    var els=document.querySelectorAll('[data-fullscreen-map], .leaflet-container, .maplibregl-map, .mapboxgl-map');
+    els.forEach(function(el){
+      if(el.closest('.mfs-host')&&!el.classList.contains('mfs-host'))return;
+      var r=el.getBoundingClientRect(); if(r.width<200||r.height<150)return;
+      add(el);
+    });
+  }
+  function start(){scan(); var n=0; var t=setInterval(function(){scan(); if(++n>20)clearInterval(t);},500);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
+<!-- /map-fullscreen -->
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="js/page.js?v=20261109"></script>
+<script src="https://maps.tristanhotham.com/assets/site-nav.js" defer></script>
+</body>
+</html>

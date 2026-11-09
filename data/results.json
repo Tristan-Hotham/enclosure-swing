@@ -1,0 +1,1587 @@
+{
+ "n": {
+  "parishes_all": 10699,
+  "sample": 9674,
+  "main": 9674,
+  "counties": 54,
+  "recent": 2184,
+  "old_only": 996,
+  "never": 6494,
+  "future": 149,
+  "recent_pc": 22.6,
+  "anyact_pc": 32.9,
+  "acts_all": 4104,
+  "acts_window": 2438,
+  "places_all": 5375,
+  "places_window": 3322,
+  "matched_window": 2624,
+  "matched_window_pc": 79.0,
+  "matched_all_pc": 79.6,
+  "acts_window_linked": 2017,
+  "acts_window_linked_pc": 83.6,
+  "name_window": 2134,
+  "spatial_window": 490,
+  "unmatched_window": 698,
+  "name_point_both": 3185,
+  "name_point_agree_pc": 90.4,
+  "name_point_median_km": 0.86,
+  "in_sample_pc": 95.6,
+  "hi_counties": 22,
+  "fuzzy": 146,
+  "audit_n": 100,
+  "audit_ok": 97,
+  "conflict": 39,
+  "ambiguous": 55,
+  "incidents": 2975,
+  "riot_parishes": 1400,
+  "riot_pc": 14.5,
+  "machine_attack_parishes": 305,
+  "other_parishes": 1289,
+  "machines": 511,
+  "first_act": 1562,
+  "last_act": 1873,
+  "acts_window_named": 2413,
+  "area_ratio_95_5": 16.8,
+  "acts_peak_year": 1811,
+  "acts_1793_1815": 1967
+ },
+ "desc": {
+  "recent": {
+   "n": 2184,
+   "riot": 18.4,
+   "incidents": 802,
+   "machines": 5.5,
+   "machine_attack": 4.3,
+   "other": 16.7
+  },
+  "old_only": {
+   "n": 996,
+   "riot": 15.3,
+   "incidents": 345,
+   "machines": 4.1,
+   "machine_attack": 3.3,
+   "other": 14.4
+  },
+  "never": {
+   "n": 6494,
+   "riot": 13.0,
+   "incidents": 1828,
+   "machines": 5.4,
+   "machine_attack": 2.7,
+   "other": 12.0
+  },
+  "future": {
+   "n": 149,
+   "riot": 12.8,
+   "incidents": 39,
+   "machines": 6.0,
+   "machine_attack": 1.3,
+   "other": 12.1
+  },
+  "all": {
+   "n": 9674,
+   "riot": 14.5,
+   "incidents": 2975,
+   "machines": 5.3,
+   "machine_attack": 3.2,
+   "other": 13.3
+  },
+  "gap_raw": 5.4
+ },
+ "main": {
+  "recent": {
+   "b": 2.71,
+   "lo": 0.16,
+   "hi": 5.27,
+   "p": 0.037,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "old": {
+   "b": 3.09,
+   "lo": 0.47,
+   "hi": 5.7,
+   "p": 0.021,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "r2": 0.119,
+  "h2_diff": -0.37,
+  "h2_lo": -3.52,
+  "h2_hi": 2.77,
+  "h2_p": 0.82,
+  "rel_pc": 19.0
+ },
+ "anyact": {
+  "b": 2.82,
+  "lo": 0.67,
+  "hi": 4.97,
+  "p": 0.01,
+  "n": 9674,
+  "clusters": 54,
+  "ymean": 14.5
+ },
+ "spec": [
+  {
+   "key": "main",
+   "label": "Main: LPM, county FE, controls",
+   "group": "planned",
+   "b": 2.71,
+   "lo": 0.16,
+   "hi": 5.27,
+   "p": 0.037,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 3.09
+  },
+  {
+   "key": "raw",
+   "label": "No controls, no fixed effects",
+   "group": "planned",
+   "b": 5.32,
+   "lo": 1.69,
+   "hi": 8.94,
+   "p": 0.004,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 2.22
+  },
+  {
+   "key": "ctrl_nofe",
+   "label": "Controls, no fixed effects",
+   "group": "planned",
+   "b": 5.54,
+   "lo": 3.04,
+   "hi": 8.03,
+   "p": 0.0,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 4.63
+  },
+  {
+   "key": "fe_noctrl",
+   "label": "County FE, no controls",
+   "group": "planned",
+   "b": 3.74,
+   "lo": 1.33,
+   "hi": 6.16,
+   "p": 0.002,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 4.5
+  },
+  {
+   "key": "region_fe",
+   "label": "Region FE instead of county FE",
+   "group": "planned",
+   "b": 4.17,
+   "lo": 1.65,
+   "hi": 6.69,
+   "p": 0.001,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 5.28
+  },
+  {
+   "key": "market_fe",
+   "label": "Market-town FE instead of county FE",
+   "group": "planned",
+   "b": 2.62,
+   "lo": 0.41,
+   "hi": 4.84,
+   "p": 0.02,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 2.75
+  },
+  {
+   "key": "grid_se",
+   "label": "Standard errors clustered on 50 km cells",
+   "group": "planned",
+   "b": 2.71,
+   "lo": 0.32,
+   "hi": 5.11,
+   "p": 0.026,
+   "n": 9674,
+   "clusters": 89,
+   "ymean": 14.5,
+   "old": 3.09
+  },
+  {
+   "key": "logit",
+   "label": "Logit (average marginal effect)",
+   "group": "planned",
+   "b": 2.64,
+   "lo": 0.26,
+   "hi": 5.02,
+   "p": 0.03,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 3.59
+  },
+  {
+   "key": "spill",
+   "label": "With neighbouring enclosure (5 and 10 km)",
+   "group": "planned",
+   "b": 3.08,
+   "lo": 0.57,
+   "hi": 5.59,
+   "p": 0.016,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 3.26
+  },
+  {
+   "key": "preriots",
+   "label": "With pre-1830 unrest",
+   "group": "planned",
+   "b": 2.79,
+   "lo": 0.23,
+   "hi": 5.34,
+   "p": 0.032,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 3.07
+  },
+  {
+   "key": "gonner_base",
+   "label": "Subsample with Gonner district data",
+   "group": "planned",
+   "b": 1.76,
+   "lo": -0.66,
+   "hi": 4.18,
+   "p": 0.154,
+   "n": 6715,
+   "clusters": 37,
+   "ymean": 16.7,
+   "old": 3.24
+  },
+  {
+   "key": "gonner",
+   "label": "Same, adding Gonner district enclosure",
+   "group": "planned",
+   "b": 1.64,
+   "lo": -0.77,
+   "hi": 4.05,
+   "p": 0.183,
+   "n": 6715,
+   "clusters": 37,
+   "ymean": 16.7,
+   "old": 3.19
+  },
+  {
+   "key": "poor_base",
+   "label": "Subsample with 1803 poor relief",
+   "group": "planned",
+   "b": -0.64,
+   "lo": -6.86,
+   "hi": 5.58,
+   "p": 0.839,
+   "n": 1251,
+   "clusters": 54,
+   "ymean": 22.0,
+   "old": 0.38
+  },
+  {
+   "key": "poor",
+   "label": "Same, adding poor relief per head",
+   "group": "planned",
+   "b": -0.64,
+   "lo": -6.88,
+   "hi": 5.59,
+   "p": 0.839,
+   "n": 1251,
+   "clusters": 54,
+   "ymean": 22.0,
+   "old": 0.38
+  },
+  {
+   "key": "link_name",
+   "label": "Linking: name matches only",
+   "group": "linking",
+   "b": 1.72,
+   "lo": -0.89,
+   "hi": 4.33,
+   "p": 0.197,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 2.06
+  },
+  {
+   "key": "link_spatial",
+   "label": "Linking: gazetteer point only",
+   "group": "linking",
+   "b": 1.57,
+   "lo": -0.72,
+   "hi": 3.86,
+   "p": 0.178,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 1.86
+  },
+  {
+   "key": "link_agree",
+   "label": "Linking: name and point agree",
+   "group": "linking",
+   "b": 0.69,
+   "lo": -1.63,
+   "hi": 3.01,
+   "p": 0.56,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 0.8
+  },
+  {
+   "key": "link_ext",
+   "label": "Linking: extended (close spellings)",
+   "group": "linking",
+   "b": 2.75,
+   "lo": 0.19,
+   "hi": 5.3,
+   "p": 0.035,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 3.33
+  },
+  {
+   "key": "hi_match",
+   "label": "Counties with at least 80% of places linked",
+   "group": "linking",
+   "b": 1.24,
+   "lo": -2.31,
+   "hi": 4.79,
+   "p": 0.495,
+   "n": 5614,
+   "clusters": 22,
+   "ymean": 15.6,
+   "old": 2.1
+  },
+  {
+   "key": "x_clean",
+   "label": "Parishes whose exposure all rules agree on",
+   "group": "exploratory",
+   "b": 1.5,
+   "lo": -1.02,
+   "hi": 4.01,
+   "p": 0.243,
+   "n": 8692,
+   "clusters": 54,
+   "ymean": 14.0,
+   "old": 1.27
+  },
+  {
+   "key": "x_area",
+   "label": "Adding log parish area",
+   "group": "exploratory",
+   "b": -0.84,
+   "lo": -3.16,
+   "hi": 1.47,
+   "p": 0.475,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": -0.23
+  },
+  {
+   "key": "x_area_dec",
+   "label": "Adding parish area deciles",
+   "group": "exploratory",
+   "b": -0.31,
+   "lo": -2.77,
+   "hi": 2.16,
+   "p": 0.809,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 0.53
+  },
+  {
+   "key": "x_area_logit",
+   "label": "Logit adding log parish area (AME)",
+   "group": "exploratory",
+   "b": -0.42,
+   "lo": -2.5,
+   "hi": 1.65,
+   "p": 0.69,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5,
+   "old": 0.86
+  }
+ ],
+ "s": {
+  "main": {
+   "b": 2.71,
+   "lo": 0.16,
+   "hi": 5.27,
+   "p": 0.037,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "raw": {
+   "b": 5.32,
+   "lo": 1.69,
+   "hi": 8.94,
+   "p": 0.004,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "ctrl_nofe": {
+   "b": 5.54,
+   "lo": 3.04,
+   "hi": 8.03,
+   "p": 0.0,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "fe_noctrl": {
+   "b": 3.74,
+   "lo": 1.33,
+   "hi": 6.16,
+   "p": 0.002,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "region_fe": {
+   "b": 4.17,
+   "lo": 1.65,
+   "hi": 6.69,
+   "p": 0.001,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "market_fe": {
+   "b": 2.62,
+   "lo": 0.41,
+   "hi": 4.84,
+   "p": 0.02,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "grid_se": {
+   "b": 2.71,
+   "lo": 0.32,
+   "hi": 5.11,
+   "p": 0.026,
+   "n": 9674,
+   "clusters": 89,
+   "ymean": 14.5
+  },
+  "logit": {
+   "b": 2.64,
+   "lo": 0.26,
+   "hi": 5.02,
+   "p": 0.03,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "spill": {
+   "b": 3.08,
+   "lo": 0.57,
+   "hi": 5.59,
+   "p": 0.016,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "preriots": {
+   "b": 2.79,
+   "lo": 0.23,
+   "hi": 5.34,
+   "p": 0.032,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "gonner_base": {
+   "b": 1.76,
+   "lo": -0.66,
+   "hi": 4.18,
+   "p": 0.154,
+   "n": 6715,
+   "clusters": 37,
+   "ymean": 16.7
+  },
+  "gonner": {
+   "b": 1.64,
+   "lo": -0.77,
+   "hi": 4.05,
+   "p": 0.183,
+   "n": 6715,
+   "clusters": 37,
+   "ymean": 16.7
+  },
+  "poor_base": {
+   "b": -0.64,
+   "lo": -6.86,
+   "hi": 5.58,
+   "p": 0.839,
+   "n": 1251,
+   "clusters": 54,
+   "ymean": 22.0
+  },
+  "poor": {
+   "b": -0.64,
+   "lo": -6.88,
+   "hi": 5.59,
+   "p": 0.839,
+   "n": 1251,
+   "clusters": 54,
+   "ymean": 22.0
+  },
+  "link_name": {
+   "b": 1.72,
+   "lo": -0.89,
+   "hi": 4.33,
+   "p": 0.197,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "link_spatial": {
+   "b": 1.57,
+   "lo": -0.72,
+   "hi": 3.86,
+   "p": 0.178,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "link_agree": {
+   "b": 0.69,
+   "lo": -1.63,
+   "hi": 3.01,
+   "p": 0.56,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "link_ext": {
+   "b": 2.75,
+   "lo": 0.19,
+   "hi": 5.3,
+   "p": 0.035,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "hi_match": {
+   "b": 1.24,
+   "lo": -2.31,
+   "hi": 4.79,
+   "p": 0.495,
+   "n": 5614,
+   "clusters": 22,
+   "ymean": 15.6
+  },
+  "x_clean": {
+   "b": 1.5,
+   "lo": -1.02,
+   "hi": 4.01,
+   "p": 0.243,
+   "n": 8692,
+   "clusters": 54,
+   "ymean": 14.0
+  },
+  "x_area": {
+   "b": -0.84,
+   "lo": -3.16,
+   "hi": 1.47,
+   "p": 0.475,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "x_area_dec": {
+   "b": -0.31,
+   "lo": -2.77,
+   "hi": 2.16,
+   "p": 0.809,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "x_area_logit": {
+   "b": -0.42,
+   "lo": -2.5,
+   "hi": 1.65,
+   "p": 0.69,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "machine": {
+   "b": 0.93,
+   "lo": -0.19,
+   "hi": 2.06,
+   "p": 0.105,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 3.2
+  },
+  "other": {
+   "b": 2.44,
+   "lo": -0.12,
+   "hi": 5.0,
+   "p": 0.061,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 13.3
+  },
+  "machine_old": {
+   "b": 1.22,
+   "lo": -0.51,
+   "hi": 2.94,
+   "p": 0.168,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 3.2
+  },
+  "other_old": {
+   "b": 3.13,
+   "lo": 0.42,
+   "hi": 5.84,
+   "p": 0.024,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 13.3
+  },
+  "poisson": {
+   "b": 20.88,
+   "lo": 4.44,
+   "hi": 37.32,
+   "p": 0.013,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 30.8,
+   "irr": 1.23,
+   "irr_lo": 1.05,
+   "irr_hi": 1.45
+  },
+  "poisson_old": {
+   "b": 48.35,
+   "lo": 20.77,
+   "hi": 75.93,
+   "p": 0.001,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 30.8,
+   "irr": 1.62,
+   "irr_lo": 1.23,
+   "irr_hi": 2.14
+  },
+  "x_area_poisson": {
+   "b": -5.12,
+   "lo": -20.85,
+   "hi": 10.61,
+   "p": 0.524,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 30.8,
+   "irr": 0.95,
+   "irr_lo": 0.81,
+   "irr_hi": 1.11
+  },
+  "x_area_other": {
+   "b": -1.01,
+   "lo": -3.35,
+   "hi": 1.34,
+   "p": 0.4,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 13.3
+  },
+  "count_ols": {
+   "b": 4.99,
+   "lo": -0.81,
+   "hi": 10.79,
+   "p": 0.092,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 30.8
+  },
+  "x_area_logarea": {
+   "b": 9.82,
+   "lo": 7.99,
+   "hi": 11.65,
+   "p": 0.0,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "x_area_old": {
+   "b": -0.23,
+   "lo": -2.79,
+   "hi": 2.33,
+   "p": 0.861,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "spill5": {
+   "b": -1.66,
+   "lo": -3.62,
+   "hi": 0.3,
+   "p": 0.097,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "spill10": {
+   "b": -2.95,
+   "lo": -7.02,
+   "hi": 1.12,
+   "p": 0.155,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "gonner_enc": {
+   "b": 0.25,
+   "lo": 0.0,
+   "hi": 0.5,
+   "p": 0.05,
+   "n": 6715,
+   "clusters": 37,
+   "ymean": 16.7
+  },
+  "poor_pc": {
+   "b": -0.02,
+   "lo": -4.25,
+   "hi": 4.21,
+   "p": 0.992,
+   "n": 1251,
+   "clusters": 54,
+   "ymean": 22.0
+  },
+  "het_machine": {
+   "b": -0.8,
+   "lo": -8.67,
+   "hi": 7.07,
+   "p": 0.842,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "het_se": {
+   "b": -1.83,
+   "lo": -6.57,
+   "hi": 2.91,
+   "p": 0.449,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "x_clean_dropped": 982
+ },
+ "windows": {
+  "w10": {
+   "win": {
+    "b": 5.34,
+    "lo": -1.31,
+    "hi": 12.0,
+    "p": 0.116,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   },
+   "earlier": {
+    "b": 2.66,
+    "lo": 0.52,
+    "hi": 4.79,
+    "p": 0.015,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   }
+  },
+  "w20": {
+   "win": {
+    "b": 3.18,
+    "lo": -0.52,
+    "hi": 6.87,
+    "p": 0.092,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   },
+   "earlier": {
+    "b": 2.67,
+    "lo": 0.77,
+    "hi": 4.58,
+    "p": 0.006,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   }
+  },
+  "w40": {
+   "win": {
+    "b": 2.66,
+    "lo": 0.09,
+    "hi": 5.24,
+    "p": 0.042,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   },
+   "earlier": {
+    "b": 3.21,
+    "lo": 0.68,
+    "hi": 5.73,
+    "p": 0.013,
+    "n": 9674,
+    "clusters": 54,
+    "ymean": 14.5
+   }
+  },
+  "w10_area": {
+   "b": 2.51,
+   "lo": -4.07,
+   "hi": 9.1,
+   "p": 0.455,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  }
+ },
+ "since": {
+  "ys_0_9": {
+   "b": 5.35,
+   "lo": -1.3,
+   "hi": 12.0,
+   "p": 0.115,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "ys_10_19": {
+   "b": 2.57,
+   "lo": -1.3,
+   "hi": 6.44,
+   "p": 0.193,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "ys_20_39": {
+   "b": 2.32,
+   "lo": 0.06,
+   "hi": 4.59,
+   "p": 0.044,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  },
+  "ys_40p": {
+   "b": 3.2,
+   "lo": 0.69,
+   "hi": 5.72,
+   "p": 0.013,
+   "n": 9674,
+   "clusters": 54,
+   "ymean": 14.5
+  }
+ },
+ "placebo": {
+  "b": -4.5,
+  "lo": -9.86,
+  "hi": 0.85,
+  "p": 0.099,
+  "n": 6494,
+  "clusters": 54,
+  "ymean": 13.0
+ },
+ "placebo_area": {
+  "b": -8.1,
+  "lo": -13.83,
+  "hi": -2.37,
+  "p": 0.006,
+  "n": 6494,
+  "clusters": 54,
+  "ymean": 13.0
+ },
+ "ri": {
+  "p": 0.003,
+  "reps": 1000,
+  "lo": -1.69,
+  "hi": 1.71
+ },
+ "loo": {
+  "min": 2.07,
+  "max": 3.23,
+  "n": 54,
+  "n_pos": 54,
+  "n_sig": 46,
+  "min_county": "Middlesex",
+  "max_county": "Norfolk"
+ },
+ "lor": {
+  "North-East": {
+   "b": 2.3,
+   "lo": -0.41,
+   "hi": 5.01,
+   "p": 0.097,
+   "n": 8626
+  },
+  "North-West": {
+   "b": 1.52,
+   "lo": -1.06,
+   "hi": 4.11,
+   "p": 0.249,
+   "n": 8501
+  },
+  "South-East": {
+   "b": 3.48,
+   "lo": 0.79,
+   "hi": 6.17,
+   "p": 0.011,
+   "n": 5963
+  },
+  "South-West": {
+   "b": 3.65,
+   "lo": 0.56,
+   "hi": 6.75,
+   "p": 0.021,
+   "n": 7015
+  },
+  "Wales": {
+   "b": 2.91,
+   "lo": 0.13,
+   "hi": 5.69,
+   "p": 0.04,
+   "n": 8591
+  }
+ },
+ "lor_range": {
+  "min": 1.52,
+  "max": 3.65
+ },
+ "sim": {
+  "s10": {
+   "mean": 2.6,
+   "lo": 1.85,
+   "hi": 3.36,
+   "reps": 200
+  },
+  "s25": {
+   "mean": 2.36,
+   "lo": 1.33,
+   "hi": 3.71,
+   "reps": 200
+  }
+ },
+ "area": {
+  "recent": 10.5,
+  "old_only": 10.4,
+  "never": 8.4
+ },
+ "validation": {
+  "n": 6715,
+  "r": 0.09,
+  "districts": 100,
+  "rho": 0.41
+ },
+ "area_q": {
+  "edges": [
+   0.0,
+   4.9,
+   7.4,
+   11.0,
+   18.6,
+   441.8
+  ],
+  "enc": [
+   8.6,
+   11.6,
+   15.9,
+   19.3,
+   26.0
+  ],
+  "not_enc": [
+   8.1,
+   10.3,
+   13.1,
+   16.0,
+   19.5
+  ],
+  "n_enc": [
+   405,
+   620,
+   641,
+   750,
+   764
+  ],
+  "n_not": [
+   1530,
+   1315,
+   1293,
+   1185,
+   1171
+  ],
+  "enc_share": [
+   20.9,
+   32.0,
+   33.1,
+   38.8,
+   39.5
+  ],
+  "top_bottom_riot": [
+   8.2,
+   22.1
+  ]
+ },
+ "decade": {
+  "dec": [
+   1750,
+   1760,
+   1770,
+   1780,
+   1790,
+   1800,
+   1810,
+   1820
+  ],
+  "riot": [
+   14.3,
+   16.2,
+   12.2,
+   18.6,
+   15.7,
+   19.4,
+   17.4,
+   24.6
+  ],
+  "n": [
+   91,
+   241,
+   436,
+   172,
+   477,
+   747,
+   741,
+   195
+  ]
+ },
+ "counties_top": [
+  {
+   "county": "Kent",
+   "n": 357,
+   "riot": 38.1,
+   "recent_pc": 5.3
+  },
+  {
+   "county": "Berkshire",
+   "n": 143,
+   "riot": 36.4,
+   "recent_pc": 40.6
+  },
+  {
+   "county": "Wiltshire",
+   "n": 260,
+   "riot": 36.2,
+   "recent_pc": 28.8
+  },
+  {
+   "county": "Hampshire",
+   "n": 257,
+   "riot": 31.9,
+   "recent_pc": 22.6
+  },
+  {
+   "county": "Sussex",
+   "n": 279,
+   "riot": 30.1,
+   "recent_pc": 12.2
+  },
+  {
+   "county": "Cambridgeshire",
+   "n": 146,
+   "riot": 27.4,
+   "recent_pc": 46.6
+  },
+  {
+   "county": "Norfolk",
+   "n": 627,
+   "riot": 26.5,
+   "recent_pc": 46.3
+  },
+  {
+   "county": "Surrey",
+   "n": 132,
+   "riot": 25.0,
+   "recent_pc": 23.5
+  }
+ ],
+ "full": {
+  "main": {
+   "n": 9674,
+   "r2": 0.119,
+   "coefs": {
+    "Intercept": {
+     "b": 0.1117,
+     "se": 0.3129,
+     "p": 0.721
+    },
+    "recent": {
+     "b": 0.0271,
+     "se": 0.013,
+     "p": 0.037
+    },
+    "old_only": {
+     "b": 0.0309,
+     "se": 0.0133,
+     "p": 0.021
+    },
+    "log_density": {
+     "b": 0.0501,
+     "se": 0.012,
+     "p": 0.0
+    },
+    "agri_share": {
+     "b": -0.0464,
+     "se": 0.0145,
+     "p": 0.001
+    },
+    "log_sex_ratio": {
+     "b": -0.0408,
+     "se": 0.0254,
+     "p": 0.109
+    },
+    "log_distel": {
+     "b": -0.0374,
+     "se": 0.0454,
+     "p": 0.41
+    },
+    "log_distnews": {
+     "b": 0.0062,
+     "se": 0.009,
+     "p": 0.49
+    },
+    "thresh1": {
+     "b": 0.0795,
+     "se": 0.0157,
+     "p": 0.0
+    },
+    "cer": {
+     "b": -0.0481,
+     "se": 0.1295,
+     "p": 0.71
+    },
+    "heavysh": {
+     "b": -0.0468,
+     "se": 0.0187,
+     "p": 0.012
+    }
+   }
+  },
+  "x_area": {
+   "n": 9674,
+   "r2": 0.163,
+   "coefs": {
+    "Intercept": {
+     "b": -0.2174,
+     "se": 0.2823,
+     "p": 0.441
+    },
+    "recent": {
+     "b": -0.0084,
+     "se": 0.0118,
+     "p": 0.475
+    },
+    "old_only": {
+     "b": -0.0023,
+     "se": 0.0131,
+     "p": 0.861
+    },
+    "log_area": {
+     "b": 0.0982,
+     "se": 0.0094,
+     "p": 0.0
+    },
+    "log_density": {
+     "b": 0.0763,
+     "se": 0.0098,
+     "p": 0.0
+    },
+    "agri_share": {
+     "b": -0.0071,
+     "se": 0.0116,
+     "p": 0.541
+    },
+    "log_sex_ratio": {
+     "b": -0.0028,
+     "se": 0.023,
+     "p": 0.903
+    },
+    "log_distel": {
+     "b": -0.0542,
+     "se": 0.0393,
+     "p": 0.168
+    },
+    "log_distnews": {
+     "b": -0.0075,
+     "se": 0.0076,
+     "p": 0.326
+    },
+    "thresh1": {
+     "b": 0.0375,
+     "se": 0.0155,
+     "p": 0.015
+    },
+    "cer": {
+     "b": 0.1404,
+     "se": 0.1316,
+     "p": 0.286
+    },
+    "heavysh": {
+     "b": -0.0291,
+     "se": 0.019,
+     "p": 0.126
+    }
+   }
+  },
+  "machine": {
+   "n": 9674,
+   "r2": 0.077,
+   "coefs": {
+    "Intercept": {
+     "b": 0.2872,
+     "se": 0.1786,
+     "p": 0.108
+    },
+    "recent": {
+     "b": 0.0093,
+     "se": 0.0057,
+     "p": 0.105
+    },
+    "old_only": {
+     "b": 0.0122,
+     "se": 0.0088,
+     "p": 0.168
+    },
+    "log_density": {
+     "b": 0.0068,
+     "se": 0.0027,
+     "p": 0.012
+    },
+    "agri_share": {
+     "b": 0.0051,
+     "se": 0.0076,
+     "p": 0.502
+    },
+    "log_sex_ratio": {
+     "b": -0.0066,
+     "se": 0.0067,
+     "p": 0.326
+    },
+    "log_distel": {
+     "b": -0.0619,
+     "se": 0.0239,
+     "p": 0.01
+    },
+    "log_distnews": {
+     "b": 0.0068,
+     "se": 0.0047,
+     "p": 0.148
+    },
+    "thresh1": {
+     "b": 0.0207,
+     "se": 0.0074,
+     "p": 0.005
+    },
+    "cer": {
+     "b": 0.0721,
+     "se": 0.081,
+     "p": 0.373
+    },
+    "heavysh": {
+     "b": -0.0157,
+     "se": 0.0082,
+     "p": 0.055
+    }
+   }
+  },
+  "other": {
+   "n": 9674,
+   "r2": 0.108,
+   "coefs": {
+    "Intercept": {
+     "b": -0.0481,
+     "se": 0.3405,
+     "p": 0.888
+    },
+    "recent": {
+     "b": 0.0244,
+     "se": 0.013,
+     "p": 0.061
+    },
+    "old_only": {
+     "b": 0.0313,
+     "se": 0.0138,
+     "p": 0.024
+    },
+    "log_density": {
+     "b": 0.0502,
+     "se": 0.012,
+     "p": 0.0
+    },
+    "agri_share": {
+     "b": -0.0538,
+     "se": 0.0134,
+     "p": 0.0
+    },
+    "log_sex_ratio": {
+     "b": -0.0383,
+     "se": 0.0251,
+     "p": 0.127
+    },
+    "log_distel": {
+     "b": -0.0082,
+     "se": 0.0521,
+     "p": 0.875
+    },
+    "log_distnews": {
+     "b": 0.0077,
+     "se": 0.0088,
+     "p": 0.381
+    },
+    "thresh1": {
+     "b": 0.0761,
+     "se": 0.0158,
+     "p": 0.0
+    },
+    "cer": {
+     "b": -0.0781,
+     "se": 0.1175,
+     "p": 0.506
+    },
+    "heavysh": {
+     "b": -0.0419,
+     "se": 0.0174,
+     "p": 0.016
+    }
+   }
+  },
+  "placebo_future": {
+   "n": 6494,
+   "r2": 0.139,
+   "coefs": {
+    "Intercept": {
+     "b": 0.1991,
+     "se": 0.3334,
+     "p": 0.55
+    },
+    "future": {
+     "b": -0.045,
+     "se": 0.0273,
+     "p": 0.099
+    },
+    "log_density": {
+     "b": 0.0474,
+     "se": 0.0119,
+     "p": 0.0
+    },
+    "agri_share": {
+     "b": -0.0286,
+     "se": 0.0141,
+     "p": 0.043
+    },
+    "log_sex_ratio": {
+     "b": -0.0478,
+     "se": 0.0272,
+     "p": 0.079
+    },
+    "log_distel": {
+     "b": -0.0516,
+     "se": 0.05,
+     "p": 0.302
+    },
+    "log_distnews": {
+     "b": 0.0155,
+     "se": 0.01,
+     "p": 0.121
+    },
+    "thresh1": {
+     "b": 0.0708,
+     "se": 0.0177,
+     "p": 0.0
+    },
+    "cer": {
+     "b": -0.069,
+     "se": 0.1365,
+     "p": 0.613
+    },
+    "heavysh": {
+     "b": -0.0535,
+     "se": 0.0234,
+     "p": 0.022
+    }
+   }
+  },
+  "spill": {
+   "n": 9674,
+   "r2": 0.12,
+   "coefs": {
+    "Intercept": {
+     "b": 0.088,
+     "se": 0.2956,
+     "p": 0.766
+    },
+    "recent": {
+     "b": 0.0308,
+     "se": 0.0128,
+     "p": 0.016
+    },
+    "old_only": {
+     "b": 0.0326,
+     "se": 0.0132,
+     "p": 0.014
+    },
+    "spill5_any": {
+     "b": -0.0166,
+     "se": 0.01,
+     "p": 0.097
+    },
+    "spill10_any": {
+     "b": -0.0295,
+     "se": 0.0208,
+     "p": 0.155
+    },
+    "log_density": {
+     "b": 0.05,
+     "se": 0.0121,
+     "p": 0.0
+    },
+    "agri_share": {
+     "b": -0.0463,
+     "se": 0.0144,
+     "p": 0.001
+    },
+    "log_sex_ratio": {
+     "b": -0.0404,
+     "se": 0.0255,
+     "p": 0.113
+    },
+    "log_distel": {
+     "b": -0.029,
+     "se": 0.0425,
+     "p": 0.495
+    },
+    "log_distnews": {
+     "b": 0.0041,
+     "se": 0.0091,
+     "p": 0.651
+    },
+    "thresh1": {
+     "b": 0.0779,
+     "se": 0.0156,
+     "p": 0.0
+    },
+    "cer": {
+     "b": -0.0401,
+     "se": 0.1272,
+     "p": 0.752
+    },
+    "heavysh": {
+     "b": -0.0474,
+     "se": 0.0182,
+     "p": 0.009
+    }
+   }
+  },
+  "fe_noctrl": {
+   "n": 9674,
+   "r2": 0.093,
+   "coefs": {
+    "Intercept": {
+     "b": -0.0032,
+     "se": 0.001,
+     "p": 0.002
+    },
+    "recent": {
+     "b": 0.0374,
+     "se": 0.0123,
+     "p": 0.002
+    },
+    "old_only": {
+     "b": 0.045,
+     "se": 0.0137,
+     "p": 0.001
+    }
+   }
+  },
+  "raw": {
+   "n": 9674,
+   "r2": 0.004,
+   "coefs": {
+    "Intercept": {
+     "b": 0.1304,
+     "se": 0.0203,
+     "p": 0.0
+    },
+    "recent": {
+     "b": 0.0532,
+     "se": 0.0185,
+     "p": 0.004
+    },
+    "old_only": {
+     "b": 0.0222,
+     "se": 0.0201,
+     "p": 0.27
+    }
+   }
+  }
+ },
+ "cty": {
+  "KENT": {
+   "recent_pc": 5.3,
+   "riot": 38.1
+  },
+  "NORFOLK": {
+   "recent_pc": 46.3,
+   "riot": 26.5
+  },
+  "SUSSEX": {
+   "recent_pc": 12.2,
+   "riot": 30.1
+  }
+ },
+ "T": {
+  "se_main": 1.3,
+  "mde": 3.7,
+  "implied_parishes": 59.0,
+  "implied_share": 4.0,
+  "implied_parishes_area_hi": 32.0
+ },
+ "F": {
+  "recent_bigger_raw": true,
+  "main_sig": true,
+  "old_equal": true,
+  "area_kills": true,
+  "placebo_negative": true,
+  "all_loo_pos": true
+ }
+}

@@ -1,0 +1,101 @@
+row,year,title,place,county_given,method,parish_at_audit,judgement
+3591,1809,West Kington (Wiltshire) inclosure.,West Kington,Wiltshire,name,WEST KINGTON,correct
+4009,1812,Wormington (Gloucestershire) inclosure.,Wormington,Gloucestershire,name,WORMINGTON,correct
+3391,1808,Clophill (Bedfordshire) inclosure.,Clophill,Bedfordshire,name,CLOPHILL,correct
+3301,1807,"Warkton, Little Oakley, and Luddington (Northamptonshire, Huntingdonshire) inclosure.",Luddington,Northamptonshire; Huntingdonshire,name,LUDDINGTON,correct
+4507,1815,South Runcton and Holme (Norfolk) inclosure.,South Runcton,Norfolk,name,SOUTH RUNCTON,correct
+3119,1805,"Threshfield and Skirethorns, and Burnsal (Yorkshire, West Riding) inclosure.",Skirethorns,Yorkshire,spatial,BURNSALL,correct
+3682,1810,Whitfield (Derbyshire) inclosure.,Whitfield,Derbyshire,spatial,GLOSSOP,correct (township of Glossop)
+2953,1803,"Wilton, Lazenby, Lackenby, and West Coatham (Yorkshire, West Riding) inclosure.",Lazenby,Yorkshire,spatial,WILTON,correct (township of Wilton)
+3935,1811,Little Ponton Inclosure.,Little Ponton,,name,LITTLE PONTON,correct
+1838,1791,Chippenham (Cambridgeshire) inclosure.,Chippenham,Cambridgeshire,name,CHIPPENHAM,correct
+4935,1824,Ferriby and Kirk Ella (Yorkshire) inclosure.,Kirk Ella,Yorkshire,name,KIRK ELLA,correct
+2268,1797,Puriton (Somerset) inclosure.,Puriton,Somerset,name,PURITON,correct
+1888,1792,Gedling (Nottinghamshire) inclosure.,Gedling,Nottinghamshire,name,GEDLING,correct
+4681,1818,Cranford (Middlesex) inclosure.,Cranford,Middlesex,name,CRANFORD,correct
+2573,1800,Braceborough (Lincolnshire) inclosure.,Braceborough,Lincolnshire,name,BRACEBOROUGH,correct
+4992,1826,Kentford (Suffolk) inclosure and tithes exoneration.,Kentford,Suffolk,name,KENTFORD,correct
+3132,1805,Chearsley (Buckinghamshire) inclosure.,Chearsley,Buckinghamshire,name,CHEARSLEY,correct
+4262,1813,Buglawton Inclosure.,Buglawton,,spatial,ASTBURY,correct (township of Astbury)
+4499,1815,Brodsworth (Yorkshire) inclosure.,Brodsworth,Yorkshire,name,BRODSWORTH,correct
+2674,1801,"Bergh Apton, Thurton, Yelverton, Alpington and Holveston (Norfolk) inclosure.",Alpington,Norfolk,name_part,ALPINGTON AND YELVERTON,correct
+4879,1821,Stapleford Abbott (Essex) inclosure.*,Stapleford Abbott,Essex,spatial,STAPLEFORD ABBOTS,correct
+2365,1798,Middlezoy (Somerset) inclosure.,Middlezoy,Somerset,name,MIDDLEZOY,correct
+2098,1795,Caunton (Nottinghamshire) inclosure.,Caunton,Nottinghamshire,name,CAUNTON,correct
+2707,1801,West Deeping and Tallington (Lincolnshire) inclosure.,West Deeping,Lincolnshire,name,WEST DEEPING,correct
+4014,1812,Osmondeston or Scole and Frenze (Norfolk) inclosure.,Osmondeston,Norfolk,name,SCOLE,correct (Osmondeston is Scole)
+4896,1822,Bobbington (Staffordshire and Salop.) inclosure.,Bobbington,Staffordshire; Shropshire,name,BOBBINGTON,correct
+4517,1815,Rumworth (Lancashire) inclosure.,Rumworth,Lancashire,spatial,DEANE,correct
+2561,1800,"Carlton and Camblesforth (Yorkshire, West Riding) inclosure.",Carlton,Yorkshire,spatial_conflict,DRAX,correct by point (Carlton near Drax)
+3187,1806,Kingsley (Staffordshire) inclosure.,Kingsley,Staffordshire,name,KINGSLEY,correct
+4731,1818,Tresham (Gloucestershire) inclosure.*,Tresham,Gloucestershire,spatial,ALDERLEY,"doubtful: Tresham was a tithing of Hawkesbury, not Alderley"
+3203,1806,Llanrûg and Llanbeblig (Carnarvon) inclosure.,Llanrûg,Caernarfonshire,name,LLANRUG,correct
+3846,1811,Foulsham and Themelthorpe (Norfolk) inclosure.,Themelthorpe,Norfolk,name,THEMELTHORPE,correct
+2269,1797,Huish Episcopi (Somerset) inclosure.,Huish Episcopi,Somerset,name,HUISH EPISCOPI,correct
+4505,1815,Necton or Neighton (Norfolk) inclosure.,Necton,Norfolk,name,NECTON,correct
+5015,1827,Burwardesley or Burwardsley (Cheshire) inclosure and allotment of lands.,Burwardesley,Cheshire,spatial,HARTHILL,doubtful: Burwardsley lay in Bunbury parish
+1990,1794,"Keevil, Idmaston, Fittleton and Chisenbury de la Folly (Wiltshire) inclosure.",Fittleton,Wiltshire,name,FITTLETON,correct
+3723,1810,"Llanaber, Llanddwywe, Llaneuddwyn, Llanbedr, and Llanfair (Merioneth) inclosure.",Llanaber,Merionethshire,name,LLANABER,correct
+3644,1809,Idle Inclosure.,Idle,,spatial,CALVERLEY,correct (township of Calverley)
+3581,1809,Gillingham and Motcombe (Dorset) inclosure.,Gillingham,Dorset,name,GILLINGHAM,correct
+2115,1795,Sedgeford (Norfolk) inclosure.,Sedgeford,Norfolk,name,SEDGEFORD,correct
+2327,1797,"Cridling Stubbs (Yorkshire, West Riding) inclosure.",Cridling Stubbs,Yorkshire,spatial,WOMERSLEY,correct
+4136,1812,Blymhill Inclosure.,Blymhill,,name,BLYMHILL,correct
+3402,1808,"Brome, Oakley, Thrandeston, Yaxley, and Eye (Suffolk) inclosure.",Oakley,Suffolk,name,OAKLEY,correct
+4522,1815,"Sutton in Kildwick (Yorkshire, West Riding) inclosure.",Sutton in Kildwick,Yorkshire,name,KILDWICK,correct
+3630,1809,"Corton, Hopton and Gorleston Inclosures.",Hopton,,name,HOPTON,correct
+4847,1820,Upper and Lower Gravenhurst and Upper Stondon (Bedfordshire) inclosure.*,Upper Stondon,Bedfordshire,name,UPPER STONDON,correct
+4058,1812,Clayhidon (Devon) inclosure.,Clayhidon,Devon,name,CLAYHIDON,correct
+3176,1806,Witchford (Cambridgeshire) inclosure.,Witchford,Cambridgeshire,name,WITCHFORD,correct
+3262,1806,Griston Inclosure.,Griston,,name,GRISTON,correct
+2444,1799,Bressingham and Fersfield (Norfolk) inclosure.,Fersfield,Norfolk,name,FERSFIELD,correct
+3309,1807,Waith (Lincolnshire) inclosure.,Waith,Lincolnshire,name,WAITHE,correct
+2222,1796,Scredington (Lincolnshire) inclosure.,Scredington,Lincolnshire,name,SCREDINGTON,correct
+3506,1808,Leominster and Luston Inclosure and Improvement.,Leominster,,name,LEOMINSTER,correct
+2459,1799,Ranworth (Norfolk) inclosure.,Ranworth,Norfolk,name_part,RANWORTH WITH PANXWORTH,correct
+4051,1812,Edgefield (Norfolk) inclosure.,Edgefield,Norfolk,name,EDGEFIELD,correct
+3556,1809,Ravensden (Bedfordshire) inclosure.,Ravensden,Bedfordshire,name,RAVENSDEN,correct
+1818,1791,"Kippax (Yorkshire, West Riding) inclosure.",Kippax,Yorkshire,name,KIPPAX,correct
+2264,1797,Swayfield and Corby (Lincolnshire) inclosure.,Swayfield,Lincolnshire,name,SWAYFIELD,correct
+3890,1811,Heybridge (Essex) inclosure.,Heybridge,Essex,name,HEYBRIDGE,correct
+3385,1808,Annesley (Nottinghamshire) inclosure.,Annesley,Nottinghamshire,name,ANNESLEY,correct
+3173,1805,Huttons Ambo Inclosure.,Huttons Ambo,,name,HUTTONS AMBO,correct
+2967,1803,East Hanney (Berkshire) inclosure.,East Hanney,Berkshire,spatial,WEST HANNEY,correct (East Hanney in West Hanney parish)
+3499,1808,St. Asaph Inclosure.,St. Asaph,,name,ST ASAPH [LLANELWY],correct
+3163,1805,Sale Inclosure.,Sale,,spatial,ASHTON UPON MERSEY,correct (Sale township of Ashton upon Mersey)
+3327,1807,North Hykeham or Hickham and Skellingthorpe (Lincolnshire) inclosure.,Skellingthorpe,Lincolnshire,name,SKELLINGTHORPE,correct
+4534,1815,Upton Lovell (Wiltshire) inclosure.,Upton Lovell,Wiltshire,name,UPTON LOVELL,correct
+2795,1802,Horningsea (Cambridgeshire) inclosure.,Horningsea,Cambridgeshire,name,HORNINGSEA,correct
+2121,1795,Abbotts Bromley (Staffordshire) inclosure.,Abbotts Bromley,Staffordshire,name,ABBOTS BROMLEY,correct
+3766,1810,Great Plumstead and Postwick Inclosures.,Postwick,,name,POSTWICK,correct
+4808,1820,Great Barford (Bedfordshire) inclosure.,Great Barford,Bedfordshire,name,GREAT BARFORD,correct
+4370,1814,Fingringhoe (Essex) inclosure.,Fingringhoe,Essex,name,FINGRINGHOE,correct
+2497,1799,"Cumberworth (Yorkshire, West Riding) inclosure.",Cumberworth,Yorkshire,spatial,KIRKBURTON,correct
+4516,1815,Witherslack (Westmorland) inclosure.,Witherslack,Westmorland,spatial,BEETHAM,correct (chapelry in Beetham)
+1884,1792,Monk Sherborne (Hampshire) inclosure.,Monk Sherborne,Hampshire,name,MONK SHERBORNE,correct
+2308,1797,Little Wilbraham (Cambridgeshire) inclosure.,Little Wilbraham,Cambridgeshire,name,LITTLE WILBRAHAM,correct
+4918,1823,Thame and Sydenham (Oxfordshire) inclosure.,Sydenham,Oxfordshire,name,SYDENHAM,correct
+2001,1794,Claife (Lancashire) inclosure.,Claife,Lancashire,spatial,HAWKSHEAD,correct (township of Hawkshead)
+3861,1811,"North and Middle Littleton, and South Littleton (Worcestershire) inclosure.",South Littleton,Worcestershire,name,SOUTH LITTLETON,correct
+2599,1800,Edmonton (Middlesex) inclosure.,Edmonton,Middlesex,name,EDMONTON,correct
+3720,1810,Fishtoft (Lincolnshire) inclosure.,Fishtoft,Lincolnshire,name,FISHTOFT,correct
+3094,1805,Ellesmere (Salop.) inclosure.,Ellesmere,Shropshire,name,ELLESMERE,correct
+2960,1803,Upton Scudamore or Skidmore (Wiltshire) inclosure.,Upton Scudamore,Wiltshire,name,UPTON SCUDAMORE,correct
+5100,1830,"Kidwelly, St. Mary Kidwelly, St. Ishmael and Pembrey (Carmarthenshire) inclosure.",St. Ishmael,Carmarthenshire,name,ST ISHMAEL,correct
+3976,1811,Beenham and Padworth Inclosures.,Beenham,,name,BEENHAM,correct
+2445,1799,Easton (Hampshire) inclosure.,Easton,Hampshire,ambiguous_name,EASTON,correct
+4708,1818,Bradford (Wiltshire) inclosure.,Bradford,Wiltshire,spatial,GREAT BRADFORD,correct
+4872,1821,Bourton-on-the-Hill and Moreton-in-Marsh (Gloucestershire) inclosure and exoneration from tythes.,Moreton-in-Marsh,Gloucestershire,name,MORETON IN MARSH,correct
+3764,1810,Bletchley Inclosure.,Bletchley,,name,BLETCHLEY,correct
+2099,1795,Henlow (Bedfordshire) inclosure.,Henlow,Bedfordshire,name,HENLOW,correct
+3345,1807,Deddington and Great Barford or Barford St. Michael (Oxfordshire) inclosure.,Great Barford,Oxfordshire,name,BARFORD ST MICHAEL,correct
+2197,1796,"Thornton, Farmanby, Ellerhurn and Kingthorp (Yorkshire, North Riding) inclosure and tithes compensation.",Thornton,Yorkshire,ambiguous_name,THORNTON,doubtful: one of several Yorkshire Thorntons; now excluded by the ambiguous-name rule
+3434,1808,North Walsham and Felmingham (Norfolk) inclosure.,North Walsham,Norfolk,name,NORTH WALSHAM,correct
+3888,1811,Hungerford (Wiltshire) inclosure.,Hungerford,Wiltshire,name,HUNGERFORD,correct
+4114,1812,"Ovingham, Bywell St. Peter and Bywell St. Andrew Inclosures.",Bywell St. Peter,,name,BYWELL ST PETER,correct
+2017,1794,Houghton (Hampshire) inclosure.,Houghton,Hampshire,name,HOUGHTON,correct
+4875,1821,Kings' Heath or Malmesbury Common (Wiltshire) inclosure and allotment of lands.,Kings' Heath,Wiltshire,spatial,ABBEY,correct
+2439,1799,Chipping Campden (Gloucestershire) inclosure.,Chipping Campden,Gloucestershire,name,CHIPPING CAMPDEN,correct
+1833,1791,Heanor and Codnor (Derbyshire) inclosure.,Codnor,Derbyshire,name,CODNOR,correct
+2755,1801,Frimley in Ash (Surrey) inclosure.,Frimley in Ash,Surrey,name,ASH,correct (Frimley chapelry in Ash)
+4364,1814,"Skeyton, Burgh-next-Aylsham, and Tuttington (Norfolk) inclosure.",Skeyton,Norfolk,name,SKEYTON,correct
