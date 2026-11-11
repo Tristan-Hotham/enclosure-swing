@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Enclosure and the Swing Riots: A Pre-specified Parish-level Test of the Grievance Hypothesis, England and Wales, 1830 to 1831"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.24091976"
+url: "https://maps.tristanhotham.com/enclosure-swing/"
+repository-code: "https://github.com/Tristan-Hotham/enclosure-swing"
+license: CC-BY-4.0
+keywords:
+  - "enclosure"
+  - "Swing riots"
+  - "collective action"
+  - "agrarian protest"
+  - "parliamentary enclosure"
+  - "record linkage"
+  - "pre-registration"
+  - "economic history"
+  - "England"
